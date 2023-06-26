@@ -27,8 +27,8 @@ sh 'ls -ltr'
     steps {
       sh 'chmod 400 susiminikube.pem'
       sh 'ls -ltr'
-      sh 'scp -i susiminikube.pem -o StrictHostKeyChecking=no repo11.yml ec2-user@43.204.109.189:/home/ec2-user/'
-      sh 'ssh -i susiminikube.pem ec2-user@43.204.109.189 "kubectl create -f repo11.yml"'
+      sh 'scp -i susiminikube.pem -o StrictHostKeyChecking=no replicaset.yml ec2-user@43.204.109.189:/home/ec2-user/'
+      sh 'ssh -i susiminikube.pem ec2-user@43.204.109.189 "kubectl create -f replicaset.yml"'
     }
   }
 
